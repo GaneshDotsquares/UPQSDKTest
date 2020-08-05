@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F0EAA7624DA9FDB00F2E411 /* UPQSDKTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0EAA7424DA9FDB00F2E411 /* UPQSDKTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F0EAA7D24DAA00100F2E411 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0EAA7C24DAA00100F2E411 /* Service.swift */; };
+		C080414E9FCC2FE336CBD925 /* Pods_UPQSDKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C50BB504E1332B6852721B /* Pods_UPQSDKTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,9 @@
 		1F0EAA7424DA9FDB00F2E411 /* UPQSDKTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UPQSDKTest.h; sourceTree = "<group>"; };
 		1F0EAA7524DA9FDB00F2E411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F0EAA7C24DAA00100F2E411 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		37BC51AAB02FF6F47729F654 /* Pods-UPQSDKTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPQSDKTest.release.xcconfig"; path = "Target Support Files/Pods-UPQSDKTest/Pods-UPQSDKTest.release.xcconfig"; sourceTree = "<group>"; };
+		4B7D32BADFDE6041457E669E /* Pods-UPQSDKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPQSDKTest.debug.xcconfig"; path = "Target Support Files/Pods-UPQSDKTest/Pods-UPQSDKTest.debug.xcconfig"; sourceTree = "<group>"; };
+		90C50BB504E1332B6852721B /* Pods_UPQSDKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UPQSDKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C080414E9FCC2FE336CBD925 /* Pods_UPQSDKTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +39,8 @@
 			children = (
 				1F0EAA7324DA9FDA00F2E411 /* UPQSDKTest */,
 				1F0EAA7224DA9FDA00F2E411 /* Products */,
+				F502F8F49A1C9FC250A7FB37 /* Pods */,
+				E43511A21A7A375814693A78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +62,24 @@
 			path = UPQSDKTest;
 			sourceTree = "<group>";
 		};
+		E43511A21A7A375814693A78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90C50BB504E1332B6852721B /* Pods_UPQSDKTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F502F8F49A1C9FC250A7FB37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B7D32BADFDE6041457E669E /* Pods-UPQSDKTest.debug.xcconfig */,
+				37BC51AAB02FF6F47729F654 /* Pods-UPQSDKTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -73,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F0EAA7924DA9FDB00F2E411 /* Build configuration list for PBXNativeTarget "UPQSDKTest" */;
 			buildPhases = (
+				4B69D6AFE267B9880F688187 /* [CP] Check Pods Manifest.lock */,
 				1F0EAA6C24DA9FDA00F2E411 /* Headers */,
 				1F0EAA6D24DA9FDA00F2E411 /* Sources */,
 				1F0EAA6E24DA9FDA00F2E411 /* Frameworks */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B69D6AFE267B9880F688187 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UPQSDKTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F0EAA6D24DA9FDA00F2E411 /* Sources */ = {
@@ -193,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -250,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -264,15 +315,18 @@
 		};
 		1F0EAA7A24DA9FDB00F2E411 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B7D32BADFDE6041457E669E /* Pods-UPQSDKTest.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UPQSDKTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -280,6 +334,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Dotsquares.UPQSDKTest;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -289,15 +345,18 @@
 		};
 		1F0EAA7B24DA9FDB00F2E411 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37BC51AAB02FF6F47729F654 /* Pods-UPQSDKTest.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UPQSDKTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +364,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Dotsquares.UPQSDKTest;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
